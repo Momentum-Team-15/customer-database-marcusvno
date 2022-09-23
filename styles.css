@@ -1,5 +1,7 @@
 * {
     font-family:'Lato', sans-serif;
+    text-align: center;
+
 }
 
 
@@ -10,15 +12,6 @@
 
 }
 
-h2{
-    font-weight:900;
-
-}
-
-img{
-    margin: 0 auto;
-}
-
 .card{
     background-color: gray;
     padding: 10px;
@@ -27,4 +20,25 @@ img{
     margin: 0 auto;
 
 
+}
+
+h2{
+    font-weight:900;
+    margin: 8px auto;
+
+}
+
+img{
+    margin: 0 auto;
+}
+
+p{
+    margin: 5px auto;
+}
+
+
+.email{
+    font-weight:300;
+    margin: 0 auto;
+    color:darkgray;
 }
