@@ -1,86 +1,77 @@
 * {
-    font-family:'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     text-align: center;
-
 }
 
-/* body{
-    margin:0 20px;
-} */
-
-h2{
-    /* margin: 0 auto; */
-    margin-bottom: 49px;
-    /* font-size:35px; */
-    font-weight:700;
-    max-width:fit-content;
-    padding-left:45px;
-
+body {
+    display: flex;
+    justify-content: center;
+    width: auto;
 }
-#roladex{
+
+h2 {
+    margin-bottom: 30px;
+    font-weight: 700;
+    max-width: fit-content;
+    padding-left: 25px;
+}
+
+#roladex {
     /* background-color: cadetblue; */
     margin: 0 auto;
-    display:flex;
-    
-    
-
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
 }
 
-.info{
-/*     background-color: gray;
-        border: 3px solid blue;
- */    padding: 10px;
-    
-    width: 300px;
+.info {
+
+    padding: 10px;
+
+    width: auto;
     margin: 0 auto;
-
-
 }
 
-.card{
-    margin:0 auto;
+.card {
+    min-width: 0;
+    margin: 0px 10px 20px 10px;
 }
 
-.name{
+.name {
     font-weight: 700;
     font-size: 20px;
 }
 
-
-
-.imgCrop{
-    height:100px;
-    width:100px;
-    position:relative;
-    overflow:hidden;
+.imgCrop {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    overflow: hidden;
     margin: 0 auto;
 
-    border-top-right-radius:50%;
-    border-bottom-left-radius:50%;
-    
-    /* MATCHES EXAMPLE CROP
-    
-    border-top-right-radius:65%;
-    border-bottom-left-radius:65%;
-    border-top-left-radius:35%;
-    border-bottom-right-radius:35%; */
+    /* LEAF CROP
+  
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%; */
+
+    /*MATCHES EXAMPLE CROP*/
+    border-top-right-radius: 65%;
+    border-bottom-left-radius: 65%;
+    border-top-left-radius: 35%;
+    border-bottom-right-radius: 35%;
 }
 
-img{
+img {
     width: auto;
     height: 100%;
-    
 }
 
-
-
-p{
+p {
     margin: 2px auto;
 }
 
-.email{
-    font-weight:300;
+.email {
+    font-weight: 300;
     margin: 5px auto;
-    color:darkgray;
+    color: rgb(82, 81, 81);
 }
-
