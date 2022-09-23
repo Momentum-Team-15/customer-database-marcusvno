@@ -1,36 +1,51 @@
 console.log("Hello world");
 const roladexDiv = document.querySelector("#roladex");
 
+
+
 function buildCardGrid(customerArray) {
     for(let person of customerArray){
         let cardContainer = document.createElement('div');
+        let imgCropper = document.createElement('div');
         let imageInject = document.createElement("img");
-        let name = document.createElement("h2");
+        //let name = document.createElement("h1");
+        let name = document.createElement("p");
         let customerEmail = document.createElement('p');
         let customerAddress = document.createElement('p');
-        let customerDOB = document.createElement('p');
-        //let dateSort = moment(person.dob.date);
-
-        let customerReg = document.createElement('p');
+        let customerDates = document.createElement('p');
+        // let customerDOB = document.createElement('p');
+        //let customerReg = document.createElement('p'); 
 
         imageInject.src = `${person.picture.medium}`;
         name.innerText = `${capitalizeFirstLetter(person.name.first)} ${capitalizeFirstLetter(person.name.last)} `;
         customerEmail.innerText = person.email;
         customerAddress.innerText = `${person.location.street.number} ${person.location.street.name}\n${person.location.city}, ${nameToAbbr(person.location.state)} ${person.location.postcode}`; 
-       // customerDOB.innerText = `DOB: ${moment().format(person.dob.date, )}`;
+        customerDates.innerText = `DOB: ${moment(person.dob.date).format('MMM DD, YYYY')}\n Customer since: ${moment(person.registered.date).format('MMM DD, YYYY')}`;
+        
+        //customerDOB.innerText = `DOB: ${moment(person.dob.date).format('MMM DD, YYYY')}`;
+        //customerReg.innerText = `Customer since: ${moment(person.registered.date).format('MMM DD, YYYY')}`;
 
-        cardContainer.appendChild(imageInject);
+
+        imgCropper.appendChild(imageInject);
         cardContainer.appendChild(name);
         cardContainer.appendChild(customerEmail);
         cardContainer.appendChild(customerAddress);
-        cardContainer.appendChild(customerDOB);
-
+        cardContainer.appendChild(customerDates);
+       
+        //cardContainer.appendChild(customerDOB);
+        //cardContainer.appendChild(customerReg);
+        
+        roladexDiv.appendChild(imgCropper);
         roladexDiv.appendChild(cardContainer);
 
         cardContainer.classList.add("card");
+        imgCropper.classList.add("imgCrop");
+        name.classList.add("name");
         customerEmail.classList.add("email");
+        customerDates.classList.add("dates");
+        
     
-        }
+    }
 
 }
 
