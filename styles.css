@@ -1,10 +1,30 @@
-#peopleContainer{
+* {
+    font-family:'Lato', sans-serif;
+}
+
+
+#roladex{
     background-color: cadetblue;
-    display:flex;
+    margin: 0 auto;
+    
 
 }
 
-.roladexCard{
+h2{
+    font-weight:900;
+
+}
+
+img{
+    margin: 0 auto;
+}
+
+.card{
     background-color: gray;
-    
+    padding: 10px;
+    border: 3px solid blue;
+    width: 200px;
+    margin: 0 auto;
+
+
 }
