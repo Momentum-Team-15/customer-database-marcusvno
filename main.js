@@ -6,6 +6,7 @@ const roladexDiv = document.querySelector("#roladex");
 function buildCardGrid(customerArray) {
     for(let person of customerArray){
         let cardContainer = document.createElement('div');
+        let infoContainer = document.createElement('div');
         let imgCropper = document.createElement('div');
         let imageInject = document.createElement("img");
         //let name = document.createElement("h1");
@@ -27,18 +28,20 @@ function buildCardGrid(customerArray) {
 
 
         imgCropper.appendChild(imageInject);
-        cardContainer.appendChild(name);
-        cardContainer.appendChild(customerEmail);
-        cardContainer.appendChild(customerAddress);
-        cardContainer.appendChild(customerDates);
+        infoContainer.appendChild(name);
+        infoContainer.appendChild(customerEmail);
+        infoContainer.appendChild(customerAddress);
+        infoContainer.appendChild(customerDates);
        
         //cardContainer.appendChild(customerDOB);
         //cardContainer.appendChild(customerReg);
         
-        roladexDiv.appendChild(imgCropper);
         roladexDiv.appendChild(cardContainer);
+        cardContainer.appendChild(imgCropper);
+        cardContainer.appendChild(infoContainer);
 
-        cardContainer.classList.add("card");
+        cardContainer.classList.add('card');
+        infoContainer.classList.add("info");
         imgCropper.classList.add("imgCrop");
         name.classList.add("name");
         customerEmail.classList.add("email");
