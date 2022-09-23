@@ -24,7 +24,6 @@ function buildCardGrid(customerArray) {
         infoContainer.appendChild(customerAddress);
         infoContainer.appendChild(customerDates);
        
-        
         roladexDiv.appendChild(cardContainer);
         cardContainer.appendChild(imgCropper);
         cardContainer.appendChild(infoContainer);
@@ -35,15 +34,10 @@ function buildCardGrid(customerArray) {
         name.classList.add("name");
         customerEmail.classList.add("email");
         customerDates.classList.add("dates");
-        
-    
     }
-
 }
 
 buildCardGrid(customers);
-console.log("goodbye world");
 
-function capitalizeFirstLetter(string){
+function capitalizeFirstLetter(string)
     return string.charAt(0).toUpperCase() + string.slice(1);
-}
