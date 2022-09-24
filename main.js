@@ -13,7 +13,8 @@ function buildCardGrid(customerArray) {
         let customerDates = document.createElement('p');
 
         imageInject.src = `${person.picture.medium}`;
-        name.innerText = `${capitalizeFirstLetter(person.name.first)} ${capitalizeFirstLetter(person.name.last)} `;
+//        name.innerText = `${capitalizeFirstLetter(person.name.first)} ${capitalizeFirstLetter(person.name.last)} `;
+        name.innerText = `${person.name.first} ${person.name.last}`;
         customerEmail.innerText = person.email;
         customerAddress.innerText = `${person.location.street.number} ${person.location.street.name}\n${person.location.city}, ${nameToAbbr(person.location.state)} ${person.location.postcode}`; 
         customerDates.innerText = `DOB: ${moment(person.dob.date).format('MMM DD, YYYY')}\n Customer since: ${moment(person.registered.date).format('MMM DD, YYYY')}`;
@@ -38,6 +39,8 @@ function buildCardGrid(customerArray) {
 }
 
 buildCardGrid(customers);
-
-function capitalizeFirstLetter(string)
+/* 
+function capitalizeFirstLetter(string){
     return string.charAt(0).toUpperCase() + string.slice(1);
+}
+ */
