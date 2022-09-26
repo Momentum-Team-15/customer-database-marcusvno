@@ -13,7 +13,7 @@ function buildCardGrid(customerArray) {
         let customerDates = document.createElement('p');
 
         imageInject.src = `${person.picture.medium}`;
-//        name.innerText = `${capitalizeFirstLetter(person.name.first)} ${capitalizeFirstLetter(person.name.last)} `;
+//      name.innerText = `${capitalizeFirstLetter(person.name.first)} ${capitalizeFirstLetter(person.name.last)} `;
         name.innerText = `${person.name.first} ${person.name.last}`;
         customerEmail.innerText = person.email;
         customerAddress.innerText = `${person.location.street.number} ${person.location.street.name}\n${person.location.city}, ${nameToAbbr(person.location.state)} ${person.location.postcode}`; 

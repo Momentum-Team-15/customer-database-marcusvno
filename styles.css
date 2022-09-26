@@ -4,9 +4,9 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    width: auto;
+/*     display: flex;
+ *//*     justify-content: flex-end;
+ */    width: auto;
 }
 
 h2 {
@@ -16,13 +16,21 @@ h2 {
     padding-left: 25px;
 }
 
+main{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
 #roladex {
     /* background-color: cadetblue; */
-    margin: 0 auto;
+
+    /* margin: 0 auto; */
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-}
+/*     justify-content:center;
+ */}
 
 .info {
 
@@ -33,7 +41,7 @@ h2 {
 }
 
 .card {
-    min-width: 0;
+    min-width: 250px;
     margin: 0px 10px 20px 10px;
 }
 
